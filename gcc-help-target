@@ -1,0 +1,77 @@
+Output to the command 'gcc -mcpu=native -march=native -Q --help=target'
+
+The following options are target specific:
+  -mabi=                                aapcs-linux
+  -mabort-on-noreturn                   [disabled]
+  -mandroid                             [disabled]
+  -mapcs                                [disabled]
+  -mapcs-frame                          [disabled]
+  -mapcs-reentrant                      [disabled]
+  -mapcs-stack-check                    [disabled]
+  -march=                               armv8-a+crc+simd
+  -marm                                 [enabled]
+  -masm-syntax-unified                  [disabled]
+  -mbe32                                [enabled]
+  -mbe8                                 [disabled]
+  -mbig-endian                          [disabled]
+  -mbionic                              [disabled]
+  -mbranch-cost=                        -1
+  -mcallee-super-interworking           [disabled]
+  -mcaller-super-interworking           [disabled]
+  -mcmse                                [disabled]
+  -mcpu=                                cortex-a53
+  -mfdpic                               [disabled]
+  -mfix-cortex-m3-ldrd                  [disabled]
+  -mflip-thumb                          [disabled]
+  -mfloat-abi=                          hard
+  -mfp16-format=                        none
+  -mfpu=                                vfp
+  -mgeneral-regs-only                   [disabled]
+  -mglibc                               [enabled]
+  -mhard-float                          -mfloat-abi=hard
+  -mlittle-endian                       [enabled]
+  -mlong-calls                          [disabled]
+  -mmusl                                [disabled]
+  -mneon-for-64bits                     [disabled]
+  -mpic-data-is-text-relative           [enabled]
+  -mpic-register=                       
+  -mpoke-function-name                  [disabled]
+  -mprint-tune-info                     [disabled]
+  -mpure-code                           [disabled]
+  -mrestrict-it                         [disabled]
+  -msched-prolog                        [enabled]
+  -msingle-pic-base                     [disabled]
+  -mslow-flash-data                     [disabled]
+  -msoft-float                          -mfloat-abi=soft
+  -mstructure-size-boundary=            8
+  -mthumb                               [disabled]
+  -mthumb-interwork                     [disabled]
+  -mtls-dialect=                        gnu
+  -mtp=                                 cp15
+  -mtpcs-frame                          [disabled]
+  -mtpcs-leaf-frame                     [disabled]
+  -mtune=                               
+  -muclibc                              [disabled]
+  -munaligned-access                    [enabled]
+  -mvectorize-with-neon-double          [disabled]
+  -mvectorize-with-neon-quad            [enabled]
+  -mword-relocations                    [disabled]
+
+  Known ARM ABIs (for use with the -mabi= option):
+    aapcs aapcs-linux apcs-gnu atpcs iwmmxt
+
+  Known __fp16 formats (for use with the -mfp16-format= option):
+    alternative ieee none
+
+  Known ARM FPUs (for use with the -mfpu= option):
+    auto crypto-neon-fp-armv8 fp-armv8 fpv4-sp-d16 fpv5-d16 fpv5-sp-d16 neon neon-fp-armv8 neon-fp16 neon-vfpv3 neon-vfpv4
+    vfp vfp3 vfpv2 vfpv3 vfpv3-d16 vfpv3-d16-fp16 vfpv3-fp16 vfpv3xd vfpv3xd-fp16 vfpv4 vfpv4-d16
+
+  Valid arguments to -mtp=:
+    auto cp15 soft
+
+  Known floating-point ABIs (for use with the -mfloat-abi= option):
+    hard soft softfp
+
+  TLS dialect to use:
+    gnu gnu2

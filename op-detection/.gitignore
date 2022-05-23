@@ -1,0 +1,8 @@
+__pycache__
+/traces
+/*model
+/*model_history_plot.svg
+/models
+/*_ds_*.npy
+/ds_*.npy
+

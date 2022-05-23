@@ -1,0 +1,26 @@
+Function Update() 'VBS code
+	OutResult.Samples = InResult.Samples
+	newNumPoints = OutResult.Samples
+	ReDim newDataArray(newNumPoints)
+	arr = InResult.DataArray(True)
+
+	' InResult.DataArray(False) provides integer data from -32768 to 32767.
+	' InResult.DataArray(True) provides real data
+	' in the same unit as the vertical scale of the trace.
+
+	trigger = True
+	For i = 0 To newNumPoints - 1
+		If arr(i) < 1 Then
+			trigger = False
+		End If
+		
+		If trigger Then
+			newDataArray(i) = 1
+		Else 
+			newDataArray(i) = 0
+		End If
+	Next
+
+	OutResult.DataArray(True) = newDataArray
+
+End Function
